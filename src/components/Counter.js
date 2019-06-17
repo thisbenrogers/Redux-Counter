@@ -29,9 +29,16 @@ class Counter extends Component {
         }
     };
 
-    incrementAsync = () => {
+    incrementAsync = async e => {
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
+        e.preventDefault();
+        let promise = new Promise(resolve => {
+            setTimeout(() => resolve(this.state.newCount), 1000)
+        });
+        let result = await promise;
+        this.props.increment(result);
+        this.setState({ newCount: null });
     };
 
     render() {
