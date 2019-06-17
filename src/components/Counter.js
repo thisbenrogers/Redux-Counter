@@ -26,7 +26,7 @@ class Counter extends Component {
                 <button onClick={() => {/* Fill me in */ }}>
                     -
                 </button>
-                 {/* Uncomment these button tags if you got
+                {/* Uncomment these button tags if you got
                 around to implementing the extra credit functions */}
                 {/* <button onClick={this.incrementIfOdd}>
                     Increment if odd
